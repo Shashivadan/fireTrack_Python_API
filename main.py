@@ -33,7 +33,7 @@ async def predict_forest(temperature: int, oxygen: int, humidity: int):
     return result
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=6000, log_level="info")
+    uvicorn.run("main:app", host="0.0.0.0", port=6000, log_level="info")
 
 # curl -X GET "http://127.0.0.1:8000/predict_forest?temperature=25&oxygen=18&humidity=60" -H "accept: application/json" 4
 # end point for the model application:
